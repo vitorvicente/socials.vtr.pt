@@ -10,3 +10,6 @@
 - Initial File Upload
 - License & README
 - Main Page Initial HTML & CSS
+
+###### Day 78
+- Final Header Design
