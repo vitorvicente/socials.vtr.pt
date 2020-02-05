@@ -60,3 +60,32 @@ header.masthead .page-heading .subheading,header.masthead .site-heading .subhead
 	font-size:80px
  }
 }
+
+.social-boxes .card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 0 10px 40px 10px;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.social-boxes .card:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.social-boxes i {
+  color: #007bff;
+  padding-top: 20px;
+  font-size: 75px;
+}
+
+.social-boxes .card-title a {
+  color: #111;
+}
+
+.social-boxes .card:hover .card-title a {
+  color: #007bff;
+  text-decoration: none;
+}
