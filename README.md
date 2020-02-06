@@ -16,3 +16,6 @@
 
 ###### Day 79
 - Content HTML & CSS
+
+###### Day 80
+- Footer HTML & CSS
