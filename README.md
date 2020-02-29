@@ -1,24 +1,19 @@
 # social.vtr.pt
-## Social Media Portal Page
 
-##### This is the fifth part of a 100 day coding challenge focused on web-development
+This website serves as a public hub for all the social links I use for my online works under grandmen123. It's one of the many pages I currently run under the vtr.pt domain, all of which are listed bellow.
 
-###### Day 0-76
-- Working on Other Projects
+This website is made up of a single HTML & CSS page using bootstrap, and it was developed as a part of an 100 day coding challenge for web development.
 
-###### Day 77
-- Initial File Upload
-- License & README
-- Main Page Initial HTML & CSS
+### Other Pages
+To see all the other pages listed under this domain, head over to:
+- https://github.com/vitorvicente/apps.vtr.pt
+- https://github.com/vitorvicente/countdowns.vtr.pt
+- https://github.com/vitorvicente/codinghub.vtr.pt
+- https://github.com/vitorvicente/newyears.vtr.pt
+- https://github.com/vitorvicente/presentations.vtr.pt
+- https://github.com/vitorvicente/status.vtr.pt
 
-###### Day 78
-- Final Header Design
+### Running & Bug Finding
+If you want to run the website to test for bugs or just mess around, all you have to do is download it and open the HTML files with your prefered browser.
 
-###### Day 79
-- Content HTML & CSS
-
-###### Day 80
-- Footer HTML & CSS
-
-###### Day 81+
-- Working on Other Projects
+Feel free to report bugs at the bug page here on GitHub and I'll address them!
