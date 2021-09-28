@@ -17,7 +17,7 @@ To see all the other pages listed under this domain, head over to:
 If you want to run the website to test for bugs or just mess around, start by cloning the repo locally, then run:
 
 ```
-	yarn && yarn start
+yarn && yarn start
 ```
 
 You're free to access data from Firebase, yet you won't be able to write to it for safety reasons.
