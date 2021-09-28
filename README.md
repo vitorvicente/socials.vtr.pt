@@ -1,4 +1,4 @@
-# social.vtr.pt
+# socials.vtr.pt
 
 This website serves as a public hub for all the social links both for my works under Grandmen123, and just for myself.
 
