@@ -2,7 +2,7 @@
 
 This website serves as a public hub for all the social links both for my works under Grandmen123, and just for myself.
 
-This website was initially made up of a single HTML & CSS page using bootstrap, and it was developed as a part of an 100 day coding challenge for web development. Since then I have migrated it to be a React.JS App, using Firebase as the source for the Social Links Data.
+This website was initially made up of a single HTML & CSS page using bootstrap, and it was developed as a part of an 100 day coding challenge for web development. Since then I have migrated it to be a React.JS App, using Firebase as the source for the Social Links Data, and my own public React Component Library (vtr-react-components) as a shared API for Firebase.
 
 ### Other Pages
 To see all the other pages listed under this domain, head over to:

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { withFirebase } from "./api/Firebase";
+import { withFirebase } from "vtr-react-components/dist/Firebase";
 
 import * as ROUTES from "./constants/routes";
 

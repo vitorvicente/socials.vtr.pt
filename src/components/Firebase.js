@@ -1,5 +1,4 @@
-import { initializeApp } from "firebase/app"
-import { getFirestore, doc } from "firebase/firestore";
+import { default as FirebaseSuper } from 'vtr-react-components/dist/Firebase';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDWiUHWHAPft5TJZ7RbteUSr5pdvMIqs_c",
@@ -12,15 +11,10 @@ const firebaseConfig = {
   measurementId: "G-L1ZGQDL204"
 };
 
-class Firebase {
-  constructor() {
-    this.app = initializeApp(firebaseConfig);
-
-    this.firestore = getFirestore(this.app);
+class Firebase extends FirebaseSuper {
+  constructor(app) {
+    super(app, firebaseConfig);
   }
-
-  // *** Firestore API ***
-  config = (configName) => doc(this.firestore, "config", configName);
 }
 
 export default Firebase;

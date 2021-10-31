@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
+import { withFirebase } from "vtr-react-components/dist/Firebase";
+
 import { getDoc } from "firebase/firestore";
-import { withFirebase } from "../api/Firebase";
 
 import Card from "../components/Card";
 import CustomIcon from "../components/CustomIcon";
@@ -19,18 +20,19 @@ const PersonalBase = ({ firebase }) => {
 		
 		async function loadData() {
 			const socialsDoc = await getDoc(firebase.config("socials"));
-			if (!socialsDoc.exists()) {
-				console.log("Error loading Socials!")
+			
+			if (socialsDoc.exists) {
+				const data = socialsDoc.data()
+				const socials = data["public"].concat(data["private"]);
+				
+				setSocials(socials);
 				return
 			}
 		
-			const data = socialsDoc.data()
-			const socials = data["public"].concat(data["private"]);
-		
-			setSocials(socials);
 		}
 		
 		loadData();
+		
 	}, [firebase]);
 	
 	const SocialCards = () => socials.map((item, index) => {

@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
+import { withFirebase } from "vtr-react-components/dist/Firebase";
+
 import { getDoc } from "firebase/firestore";
-import { withFirebase } from "../api/Firebase";
 
 import Card from "../components/Card";
 import CustomIcon from "../components/CustomIcon";
@@ -19,14 +20,11 @@ const LandingBase = ({ firebase }) => {
 		
 		async function loadData() {
 			const socialsDoc = await getDoc(firebase.config("socials"));
-			if (!socialsDoc.exists()) {
-				console.log("Error loading Socials!")
+
+			if (socialsDoc.exists) {
+				setSocials(socialsDoc.data()["public"])
 				return
 			}
-		
-			const socials = socialsDoc.data()["public"]
-		
-			setSocials(socials);
 		}
 		
 		loadData();
@@ -36,7 +34,7 @@ const LandingBase = ({ firebase }) => {
 		const Icon = <CustomIcon icon={item.icon} />
 			
 		return (
-			<Card icon={Icon} link={item.url} title={item.name} />
+			<Card key={index} icon={Icon} link={item.url} title={item.name} />
 		);
 	});
 
