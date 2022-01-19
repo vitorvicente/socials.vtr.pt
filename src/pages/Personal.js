@@ -4,13 +4,13 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
 import { withFirebase } from "vtr-react-components/dist/Firebase";
+import { VtrHeader } from "vtr-react-components/dist/VtrHeader";
+import { VtrFooter } from "vtr-react-components/dist/VtrFooter";
 
 import { getDoc } from "firebase/firestore";
 
 import Card from "../components/Card";
 import CustomIcon from "../components/CustomIcon";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 
 const PersonalBase = ({ firebase }) => {
@@ -45,7 +45,7 @@ const PersonalBase = ({ firebase }) => {
 
 	return (
 		<>
-			<Header />
+			<VtrHeader />
 		
 			<Container>
 				<Row lg={2} md={2} sm={1} xl={2} xs={1}>
@@ -53,7 +53,7 @@ const PersonalBase = ({ firebase }) => {
 				</Row>
 			</Container>
 			
-			<Footer />
+			<VtrFooter />
 		</>
 	);
 };
