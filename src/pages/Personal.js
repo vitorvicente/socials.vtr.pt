@@ -17,29 +17,25 @@ const PersonalBase = ({ firebase }) => {
 	const [socials, setSocials] = useState([]);
 
 	useEffect(() => {
-		
 		async function loadData() {
 			const socialsDoc = await getDoc(firebase.config("socials"));
 			
 			if (socialsDoc.exists) {
-				const data = socialsDoc.data()
+				const data = socialsDoc.data();
 				const socials = data["public"].concat(data["private"]);
-				
+
 				setSocials(socials);
-				return
 			}
-		
 		}
 		
 		loadData();
-		
 	}, [firebase]);
 	
 	const SocialCards = () => socials.map((item, index) => {
 		const Icon = <CustomIcon icon={item.icon} />
 			
 		return (
-			<Card icon={Icon} link={item.url} title={item.name} />
+			<Card key={index} icon={Icon} link={item.url} title={item.name} />
 		);
 	});
 
