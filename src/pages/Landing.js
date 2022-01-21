@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -17,13 +17,11 @@ const LandingBase = ({ firebase }) => {
 	const [socials, setSocials] = useState([]);
 
 	useEffect(() => {
-		
 		async function loadData() {
 			const socialsDoc = await getDoc(firebase.config("socials"));
 
 			if (socialsDoc.exists) {
-				setSocials(socialsDoc.data()["public"])
-				return
+				setSocials(socialsDoc.data()["public"]);
 			}
 		}
 		
@@ -42,12 +40,12 @@ const LandingBase = ({ firebase }) => {
 		<>
 			<VtrHeader />
 		
-			<Container>
+			<Container style={{minHeight: "50vh"}}>
 				<Row lg={2} md={2} sm={1} xl={2} xs={1}>
 					<SocialCards />
 				</Row>
 			</Container>
-			
+
 			<VtrFooter />
 		</>
 	);
